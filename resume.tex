@@ -1,4 +1,4 @@
-\documentclass[a4paper, 8pt]{article}
+\documentclass[a4paper, 12pt]{article}
 
 % Package for page dimensions
 \usepackage[scale=0.9, top=.5in, bottom=.5in]{geometry}
@@ -10,9 +10,6 @@
 \usepackage{fontspec}
 \usepackage{fontawesome5}
 
-% Package for hyperlinks
-\usepackage[unicode, hidelinks]{hyperref}
-\hypersetup{colorlinks=true, allcolors=[HTML]{0000DB}}
 
 % Packages for tables
 \usepackage{tabularx}
@@ -25,6 +22,13 @@
 
 % Package for colors
 \usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{linkblue}{RGB}{60, 120, 216}
+\definecolor{regtextgray}{RGB}{102, 102, 102}
+\definecolor{imptextblack}{RGB}{0, 0, 0}
+
+% Package for hyperlinks
+\usepackage[unicode, hidelinks]{hyperref}
+\hypersetup{colorlinks=true, allcolors=linkblue}
 
 % Packages for lists within sections
 \usepackage{enumitem}
@@ -37,6 +41,7 @@
 \setmainfont{Arial}
 
 \begin{document}
+\color{regtextgray} % regular text color
 \pagestyle{empty} % non-numbered pages
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
@@ -47,5 +52,23 @@
     \underline{\href{https://github.com/pixelfox01}{\raisebox{-0.05\height}{\faGithub} github.com/pixelfox01/}} $|$
     \underline{\href{https://www.linkedin.com/in/imran-yafith-95a437266/}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/imran-yafith}}
 \end{tabularx}
+
+\begin{center}
+    \fontsize{11pt}{12pt}\selectfont
+    Dedicated third-year Computer Science student with a strong foundation in data structures and algorithms and a keen interest in problem-solving and optimizing code efficiency.
+    Experience building, testing and deploying user-focused applications using modern technologies.
+\end{center}
+
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l X@{} }
+    \textcolor{imptextblack}{\textbf{Honours Bachelor of Computer Science}} & \hfill Sep. 2021 - Apr. 2026 \\
+    \small{Sheridan College $|$ GPA:\ 3.82}
+\end{tabularx}
+\begin{center}
+    \begin{tabular}{@{} r @{\hspace{2em}} p{0.7\textwidth} @{}}
+        \textbf{Relevant Coursework} & Data Structures \& Algorithms, C/C++ Program Design, Enterprise Software Development, Distributed \& Parallel Computing \\
+        \textbf{Extra-curricular}    & \textcolor{imptextblack}{\textit{Hackville '23 Winner}}, Executive of the Sheridan Computer Science Club                \\
+    \end{tabular}
+\end{center}
 
 \end{document}
