@@ -1,0 +1,51 @@
+\documentclass[a4paper, 8pt]{article}
+
+% Package for page dimensions
+\usepackage[scale=0.9, top=.5in, bottom=.5in]{geometry}
+
+% Package for no indentation and adjusting paragraph spacing
+\usepackage{parskip} 
+
+% Packages for fonts and icons
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+
+% Package for hyperlinks
+\usepackage[unicode, hidelinks]{hyperref}
+\hypersetup{colorlinks=true, allcolors=[HTML]{0000DB}}
+
+% Packages for tables
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% Packages for section titles
+\usepackage{titlesec}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{4pt}
+
+% Package for colors
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Packages for lists within sections
+\usepackage{enumitem}
+
+% Package for bibliography
+% \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+% \addbibresource{citations.bib}
+
+% Set main font
+\setmainfont{Arial}
+
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+    \Huge{IMRAN YAFITH}                                                                       \\[6pt]
+    \underline{\href{mailto:imranpyafith@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} imranpyafith@gmail.com}} $|$
+    \underline{\href{https://imranyafith.com/}{\raisebox{-0.05\height}{\faGlobe} imranyafith.com}} $|$
+    \underline{\href{tel:+16476873213}{\raisebox{-0.05\height}{\faMobile} +1 (647) 687-3213}} \\
+    \underline{\href{https://github.com/pixelfox01}{\raisebox{-0.05\height}{\faGithub} github.com/pixelfox01/}} $|$
+    \underline{\href{https://www.linkedin.com/in/imran-yafith-95a437266/}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/imran-yafith}}
+\end{tabularx}
+
+\end{document}
