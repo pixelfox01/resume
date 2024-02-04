@@ -1,0 +1,92 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Package for page dimensions
+\usepackage[scale=0.9, top=.5in, bottom=.5in]{geometry}
+
+% Package for no indentation and adjusting paragraph spacing
+\usepackage{parskip} 
+
+% Packages for fonts and icons
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+
+
+% Packages for tables
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash\hspace{0pt}}X}
+
+% Packages for section titles
+\usepackage{titlesec}
+\titleformat{\section}{\Large\scshape\let\oldraggedright\raggedright
+\renewcommand{\raggedright}{\oldraggedright\rightskip=0pt plus 2em}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{6pt}
+
+% Package for colors
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{linkblue}{RGB}{60, 120, 216}
+\definecolor{regtextgray}{RGB}{102, 102, 102}
+\definecolor{imptextblack}{RGB}{0, 0, 0}
+
+% Package for hyperlinks
+\usepackage[unicode, hidelinks]{hyperref}
+\hypersetup{colorlinks=true, allcolors=linkblue}
+
+
+\tolerance=2000
+\emergencystretch=1em
+% Packages for lists within sections
+\usepackage{enumitem}
+
+% Package for bibliography
+% \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+% \addbibresource{citations.bib}
+
+% Set main font
+\setmainfont{Cambria}
+
+\input{info.tex}
+
+\begin{document}
+\color{imptextblack} % regular text color
+\pagestyle{empty} % non-numbered pages
+
+% Title Section
+\begin{tabularx}{\linewidth}{@{} Y @{}}
+    \textcolor{imptextblack}{\Huge{\textbf{IMRAN YAFITH}}}                                    \\[6pt]
+    \underline{\href{mailto:imranpyafith@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} imranpyafith@gmail.com}} $|$
+    \underline{\href{https://imranyafith.com/}{\raisebox{-0.05\height}{\faGlobe} imranyafith.com}} $|$
+    \underline{\href{tel:+16476873213}{\raisebox{-0.05\height}{\faMobile} +1 (647) 687-3213}} \\
+    \underline{\href{https://github.com/pixelfox01}{\raisebox{-0.05\height}{\faGithub} github.com/pixelfox01/}} $|$
+    \underline{\href{https://www.linkedin.com/in/imran-yafith-95a437266/}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/imran-yafith}}
+\end{tabularx}
+
+\vspace{0.2in}
+
+% Opening block
+\today\\
+
+\vspace{-0.1in}\recipient\\
+% \recipienttitle\\
+\company\\
+\street\\
+\city, \state\ \zip\\
+
+\vspace{-0.1in}\greeting\ \recipient,\\
+
+% Body
+\vspace{-0.1in}\setlength
+\noindent\input{body.tex}
+
+% Closer
+\vspace{0.2in}
+% \vfill
+
+% \begin{flushright}
+\noindent\closer,
+
+% \vspace{-0.1in}\includegraphics[width=1.5in]{sig.png}\vspace{-0.1in}
+
+\noindent\myname
+% \end{flushright}
+
+\end{document}
